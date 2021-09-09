@@ -19,11 +19,9 @@ const GlobalStyle = createGlobalStyle`
   ::selection { background: rgba(255, 201, 176, .6); }
   body {
     font-family: ${theme.fonts.openSans}, sans-serif;
-    background: ${theme.color.white};
     color: ${theme.color.black};
     margin: 0;
     padding: 0; 
-    background: black;
   }
   a {
     color: currentColor;

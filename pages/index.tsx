@@ -1,8 +1,23 @@
-import styled from 'styled-components';
-import HomeComponent from '../components/Home/Home';
+import HomeComponent, { HomeProps } from '../components/Home/Home';
+import { GetStaticProps } from 'next';
 
-const Home = () => {
-  return <HomeComponent />;
+type IndexProps = {
+  homeProps: HomeProps;
 };
 
-export default Home;
+const Index = ({ homeProps }: IndexProps) => {
+  return <HomeComponent {...homeProps} />;
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      //TODO: Bring data from API
+      homeProps: {
+        title: 'Loviscek Propiedades',
+        description: 'Bienvenidos al sitio',
+      },
+    },
+  };
+};
+export default Index;

@@ -1,11 +1,11 @@
-import * as S from './Home.styles';
+import * as S from './Hero.styles';
 
-export type HomeProps = {
+export type HeroProps = {
   title: string;
   description: string;
 };
 
-const HomeComponent = ({ title, description }: HomeProps) => {
+const Hero = ({ title, description }: HeroProps) => {
   return (
     <>
       <S.Container>
@@ -17,4 +17,4 @@ const HomeComponent = ({ title, description }: HomeProps) => {
   );
 };
 
-export default HomeComponent;
+export default Hero;

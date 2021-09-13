@@ -1,4 +1,4 @@
-import HomeComponent, { HomeProps } from '../components/Home/Home';
+import Hero, { HomeProps } from '../components/Home/Hero';
 import { GetStaticProps } from 'next';
 
 type IndexProps = {
@@ -6,7 +6,7 @@ type IndexProps = {
 };
 
 const Index = ({ homeProps }: IndexProps) => {
-  return <HomeComponent {...homeProps} />;
+  return <Hero {...homeProps} />;
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
